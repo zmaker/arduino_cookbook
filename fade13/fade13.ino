@@ -1,23 +1,27 @@
-void setup() {
-  // initialize digital pin 13 as an output.
+void setup() {  
   pinMode(13, OUTPUT);
   Serial.begin(9600);
 }
 
-int MAX = 1000;
-int i = 1;
-int c = 0;
+int MAX = 100;
+int i = 1;  //lunghezza accensione/spegnimento
+int c = 0; //contatore
 int sgn = 1;
-// the loop function runs over and over again forever
+
 void loop() {
+  //il contatore cresce
   c++;
-  digitalWrite(13, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delayMicroseconds(i);              // wait for a second
-  digitalWrite(13, LOW);    // turn the LED off by making the voltage LOW
+  
+  digitalWrite(13, HIGH);   
+  delayMicroseconds(i);     
+  digitalWrite(13, LOW);    
   delayMicroseconds(MAX - i);   
 
+  //ogni 5 passi del contatore incremento la pausa di sgn 
+  //che può valere 1 o -1
   if ((c%5) == 0) i = i + sgn;
 
+  //arrivato con la pausa a 100 usec, inverto il segno
   if (i >= 100) {
     sgn = -1;
   }
