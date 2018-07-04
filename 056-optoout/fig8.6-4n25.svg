@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1003"
+   height="393.04279"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fig8.6-4n25.svg"
+   inkscape:export-filename="/Users/paolo/Desktop/LSWR - Manuale Arduino/008/immagini/fig8.6-4n25.png"
+   inkscape:export-xdpi="300.04858"
+   inkscape:export-ydpi="300.04858">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="-158.79504"
+     inkscape:cy="173.98177"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1280"
+     inkscape:window-height="729"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     fit-margin-top="20"
+     fit-margin-left="20"
+     fit-margin-right="20"
+     fit-margin-bottom="20"
+     inkscape:object-nodes="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2985"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       originx="490"
+       originy="-1219.9999" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(490,560.68065)">
+    <rect
+       style="opacity:1;fill:#ffaa18;fill-opacity:0.34502923;fill-rule:nonzero;stroke:none;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4225"
+       width="450"
+       height="320.00009"
+       x="-470"
+       y="-507.63794"
+       ry="0.000120382" />
+    <g
+       id="g4877"
+       transform="translate(-580,-640.00004)">
+      <path
+         sodipodi:nodetypes="cccccccc"
+         transform="translate(-139.904,235.39463)"
+         inkscape:connector-curvature="0"
+         id="path4869"
+         d="m 1009.904,-113.03251 0,260 10,10 140,0 10,-10 40,0 0,-260 z"
+         style="fill:#3faaaf;fill-opacity:1;stroke:#000000;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4871"
+         d="m 1000,102.36212 0,40 30,0 0,-40 -30,0"
+         style="fill:#979797;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4873"
+         d="m 900,112.36212 0,30 20,0 0,-30 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4875"
+         d="m 920,226.36212 0,110 30,0 0,-110 -30,0"
+         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <flowRoot
+         inkscape:export-ydpi="231.11"
+         inkscape:export-xdpi="231.11"
+         inkscape:export-filename="/Users/paolo/Dropbox/lavori/scrivere/Arduino Per Maker/005/immagini/fig5.XX_led11_schema.png"
+         transform="translate(822.84375,15.560844)"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         id="flowRoot3837"
+         xml:space="preserve"><flowRegion
+           id="flowRegion3839"><rect
+             y="130.52306"
+             x="87.14286"
+             height="54.710705"
+             width="160.0134"
+             id="rect3841" /></flowRegion><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:48px;font-family:'Ostrich Sans';-inkscape-font-specification:'Ostrich Sans Heavy'"
+           id="flowPara3843">Arduino</flowPara></flowRoot>    </g>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3845-3-2-8-0-4"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="translate(-31.607147,-414.18919)"
+       inkscape:export-filename="/Users/paolo/Dropbox/lavori/scrivere/Arduino Per Maker/006/immagini/sm-fig6.10-circuito-multi-button.png"
+       inkscape:export-xdpi="68.753555"
+       inkscape:export-ydpi="68.753555"><flowRegion
+         id="flowRegion3847-4-2-7-0-9"><rect
+           id="rect3849-6-9-9-1-3"
+           width="116.16754"
+           height="64.649765"
+           x="273.75134"
+           y="65.271973"
+           style="font-size:35px" /></flowRegion><flowPara
+         id="flowPara3851-97-3-8-1-4"
+         style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:35px;font-family:'Ostrich Sans';-inkscape-font-specification:'Ostrich Sans Heavy'">GND</flowPara></flowRoot>    <path
+       style="opacity:1;fill:none;fill-opacity:0.76433123;fill-rule:nonzero;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -60,-397.63792 -20,0 0,20 20,0 z"
+       id="path4185"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -60,-387.63792 30,-0.71429 0,10.71429 -10,0 10,20 10,-20 -10,0"
+       id="path4187"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccc" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:0.76433123;fill-rule:nonzero;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -40,-357.63792 20,0"
+       id="path4189"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:0.76433123;fill-rule:nonzero;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -30,-357.63792 0,10 -30,0"
+       id="path4191"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -40,-377.63792 20,0 -10,15 -10,-15"
+       id="path4193"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -10.493203,-359.46554 17.3228932,9.99586 -1.8317566,-6.82969 L 0,-347.63792 l 6.8296902,-1.83176"
+       id="path4195"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -10.4932,-344.46554 17.32289,9.99586 -1.83175,-6.82969 -4.99794,8.66145 6.82969,-1.83176"
+       id="path4195-5"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:0.76433123;fill-rule:nonzero;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -60,-357.63792 -20,0 0,20 20,0 z"
+       id="path4185-6"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:0.76433123;fill-rule:nonzero;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -60,-317.63792 -20,0 0,20 20,0 z"
+       id="path4185-3"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:0.76433123;fill-rule:nonzero;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 65,-397.63792 -20,0 0,20 20,0 z"
+       id="path4185-7"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:0.76433123;fill-rule:nonzero;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 65,-357.63792 -20,0 0,20 20,0 z"
+       id="path4185-6-4"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:0.76433123;fill-rule:nonzero;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 65,-317.63792 -20,0 0,20 20,0 z"
+       id="path4185-3-7"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 20,-347.63792 0,40"
+       id="path4269"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 45,-347.63792 -15,0 -10,10 0,10"
+       id="path4271"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 45,-307.63792 -15,0 -10,-10"
+       id="path4273"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -60,-377.63792 0,60"
+       id="path4275"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -60,-297.63792 0,10 105,0 0,-10 0,-80"
+       id="path4277"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -60,-397.63792 0,-15 45,0 c 0,10 15,10 15,0 l 45,0 0,15"
+       id="path4279"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccc" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3845-3-2-8-0-4-0"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="translate(-316.1713,-541.00644)"
+       inkscape:export-filename="/Users/paolo/Dropbox/lavori/scrivere/Arduino Per Maker/006/immagini/sm-fig6.10-circuito-multi-button.png"
+       inkscape:export-xdpi="68.753555"
+       inkscape:export-ydpi="68.753555"><flowRegion
+         id="flowRegion3847-4-2-7-0-9-8"><rect
+           id="rect3849-6-9-9-1-3-6"
+           width="116.16754"
+           height="64.649765"
+           x="273.75134"
+           y="65.271973" /></flowRegion><flowPara
+         id="flowPara3851-97-3-8-1-4-6"
+         style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:48px;font-family:'Ostrich Sans';-inkscape-font-specification:'Ostrich Sans Heavy'">4n25</flowPara></flowRoot>    <g
+       id="g3098-6-4-0-6"
+       transform="matrix(0,1,-1,0,632.36209,-497.63792)"
+       inkscape:export-filename="/Users/paolo/Dropbox/lavori/scrivere/Arduino Per Maker/006/immagini/sm-fig6.10-circuito-multi-button.png"
+       inkscape:export-xdpi="68.753555"
+       inkscape:export-ydpi="68.753555">
+      <path
+         sodipodi:nodetypes="cccccccccc"
+         inkscape:connector-curvature="0"
+         id="path3038-8-0-7-8-5"
+         d="m 150,502.37229 -15,-0.0102 -5,-15 -10,30 -10,-30 -10,30 -10,-30 -10,30 -5,-15 -15,0.0102"
+         style="fill:none;stroke:#000000;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.33333349;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <g
+       id="g3098-6-4-0-8"
+       transform="translate(-260,-890.00001)"
+       inkscape:export-filename="/Users/paolo/Dropbox/lavori/scrivere/Arduino Per Maker/006/immagini/sm-fig6.10-circuito-multi-button.png"
+       inkscape:export-xdpi="68.753555"
+       inkscape:export-ydpi="68.753555">
+      <path
+         sodipodi:nodetypes="cccccccccc"
+         inkscape:connector-curvature="0"
+         id="path3038-8-0-7-8-7"
+         d="m 150,502.37229 -15,-0.0102 -5,-15 -10,30 -10,-30 -10,30 -10,-30 -10,30 -5,-15 -15,0.0102"
+         style="fill:none;stroke:#000000;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.27777767;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.27777767;stroke-dasharray:none;stroke-opacity:1"
+       d="m -80,-387.63792 -30,0"
+       id="path4355"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.27777767;stroke-dasharray:none;stroke-opacity:1"
+       d="m -200,-387.63792 -50,0"
+       id="path4359"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3845-3-2-8-0-4-0-2"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="translate(-728.11981,-457.18428)"
+       inkscape:export-filename="/Users/paolo/Dropbox/lavori/scrivere/Arduino Per Maker/006/immagini/sm-fig6.10-circuito-multi-button.png"
+       inkscape:export-xdpi="68.753555"
+       inkscape:export-ydpi="68.753555"><flowRegion
+         id="flowRegion3847-4-2-7-0-9-8-5"><rect
+           id="rect3849-6-9-9-1-3-6-4"
+           width="116.16754"
+           height="64.649765"
+           x="273.75134"
+           y="65.271973" /></flowRegion><flowPara
+         id="flowPara3851-97-3-8-1-4-6-9"
+         style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:48px;font-family:'Ostrich Sans';-inkscape-font-specification:'Ostrich Sans Heavy'">12v</flowPara></flowRoot>    <circle
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.27777767;stroke-dasharray:none;stroke-opacity:1"
+       id="path4385"
+       cx="-250"
+       cy="-387.63791"
+       r="5" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.27777767;stroke-dasharray:none;stroke-opacity:1"
+       d="m 65,-347.63792 225,0"
+       id="path4387"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <circle
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.27777767;stroke-dasharray:none;stroke-opacity:1"
+       id="path4389"
+       cx="130"
+       cy="-347.63791"
+       r="5" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3845-3-2-8-0-4-0-5"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="translate(-119.02844,-492.43502)"
+       inkscape:export-filename="/Users/paolo/Dropbox/lavori/scrivere/Arduino Per Maker/006/immagini/sm-fig6.10-circuito-multi-button.png"
+       inkscape:export-xdpi="68.753555"
+       inkscape:export-ydpi="68.753555"><flowRegion
+         id="flowRegion3847-4-2-7-0-9-8-7"><rect
+           id="rect3849-6-9-9-1-3-6-5"
+           width="116.16754"
+           height="64.649765"
+           x="273.75134"
+           y="65.271973" /></flowRegion><flowPara
+         id="flowPara3851-97-3-8-1-4-6-7"
+         style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:48px;font-family:'Ostrich Sans';-inkscape-font-specification:'Ostrich Sans Heavy'">10k</flowPara></flowRoot>    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.27777767;stroke-dasharray:none;stroke-opacity:1"
+       d="m 70,-307.63792 220,0"
+       id="path4439"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3845-3-2-8-0-4-8"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="translate(-5.8928565,-454.90347)"
+       inkscape:export-filename="/Users/paolo/Dropbox/lavori/scrivere/Arduino Per Maker/006/immagini/sm-fig6.10-circuito-multi-button.png"
+       inkscape:export-xdpi="68.753555"
+       inkscape:export-ydpi="68.753555"><flowRegion
+         id="flowRegion3847-4-2-7-0-9-6"><rect
+           id="rect3849-6-9-9-1-3-0"
+           width="116.16754"
+           height="64.649765"
+           x="273.75134"
+           y="65.271973"
+           style="font-size:35px" /></flowRegion><flowPara
+         id="flowPara3851-97-3-8-1-4-5"
+         style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:35px;font-family:'Ostrich Sans';-inkscape-font-specification:'Ostrich Sans Heavy'">2</flowPara></flowRoot>    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.27777767;stroke-dasharray:none;stroke-opacity:1"
+       d="m 130,-437.63792 0,-20 160,0"
+       id="path4465"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3845-3-2-8-0-4-8-2"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="translate(-17.892853,-564.90347)"
+       inkscape:export-filename="/Users/paolo/Dropbox/lavori/scrivere/Arduino Per Maker/006/immagini/sm-fig6.10-circuito-multi-button.png"
+       inkscape:export-xdpi="68.753555"
+       inkscape:export-ydpi="68.753555"><flowRegion
+         id="flowRegion3847-4-2-7-0-9-6-9"><rect
+           id="rect3849-6-9-9-1-3-0-6"
+           width="116.16754"
+           height="64.649765"
+           x="273.75134"
+           y="65.271973"
+           style="font-size:35px" /></flowRegion><flowPara
+         id="flowPara3851-97-3-8-1-4-5-4"
+         style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:35px;font-family:'Ostrich Sans';-inkscape-font-specification:'Ostrich Sans Heavy'">5v</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3845-3-2-8-0-4-0-5-6"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="translate(-442.13512,-528.80051)"
+       inkscape:export-filename="/Users/paolo/Dropbox/lavori/scrivere/Arduino Per Maker/006/immagini/sm-fig6.10-circuito-multi-button.png"
+       inkscape:export-xdpi="68.753555"
+       inkscape:export-ydpi="68.753555"><flowRegion
+         id="flowRegion3847-4-2-7-0-9-8-7-6"><rect
+           id="rect3849-6-9-9-1-3-6-5-4"
+           width="116.16754"
+           height="64.649765"
+           x="273.75134"
+           y="65.271973" /></flowRegion><flowPara
+         id="flowPara3851-97-3-8-1-4-6-7-5"
+         style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:48px;font-family:'Ostrich Sans';-inkscape-font-specification:'Ostrich Sans Heavy'">1k</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4227"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:20px;line-height:125%;font-family:Roboto;-inkscape-font-specification:'Roboto Medium';text-align:center;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#ffaa18;fill-opacity:0.34502923;fill-rule:nonzero;stroke:none;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       transform="translate(-319.6278,-390.97502)"><flowRegion
+         id="flowRegion4229"><rect
+           id="rect4231"
+           width="340"
+           height="100"
+           x="-88.250366"
+           y="-106.95728" /></flowRegion><flowPara
+         id="flowPara4233"
+         style="font-size:25px;fill:#000000;fill-opacity:1">circuito indipendente</flowPara></flowRoot>    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:25px;line-height:125%;font-family:Roboto;-inkscape-font-specification:'Roboto Medium';text-align:center;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="-600"
+       y="-447.63794"
+       id="text4235"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4237"
+         x="-600"
+         y="-447.63794" /></text>
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m -290,-387.63793 -90,0"
+       id="path4239"
+       inkscape:connector-curvature="0" />
+    <circle
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.27777767;stroke-dasharray:none;stroke-opacity:1"
+       id="path4385-8"
+       cx="-290"
+       cy="-387.63791"
+       r="5" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:8;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m -290,-407.63793 40,0"
+       id="path4256"
+       inkscape:connector-curvature="0" />
+    <circle
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.27777767;stroke-dasharray:none;stroke-opacity:1"
+       id="path4385-8-5"
+       cx="-380"
+       cy="-387.63791"
+       r="5" />
+    <circle
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.27777767;stroke-dasharray:none;stroke-opacity:1"
+       id="path4385-8-8"
+       cx="-380"
+       cy="-337.63791"
+       r="5" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m -380,-337.63793 230,0"
+       id="path4280"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m -80,-347.63793 -30,0 0,10 -40,0"
+       id="path4282"
+       inkscape:connector-curvature="0" />
+    <g
+       id="g4290"
+       transform="translate(-5,20.000005)">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4284"
+         d="m -395,-412.63793 0,10"
+         style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4286"
+         d="m -400,-407.63793 10,0"
+         style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m -405,-337.63793 10,0"
+       id="path4288"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>
