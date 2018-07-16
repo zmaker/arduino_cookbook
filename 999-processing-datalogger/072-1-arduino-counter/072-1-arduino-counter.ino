@@ -1,4 +1,4 @@
-int i = 0;
+int i = 100;
 
 void setup() {
   Serial.begin(9600);
