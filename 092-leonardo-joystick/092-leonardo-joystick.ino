@@ -5,7 +5,7 @@
 void setup() {
   pinMode(BUTTON, INPUT);  
   Serial.begin(9600);
-  Mouse.begin();
+  
 }
 
 int stato = LOW;
@@ -13,6 +13,11 @@ int stato = LOW;
 void loop() {
   if (digitalRead(BUTTON)) {
     stato = !stato;
+    if (stato) {
+      Mouse.begin();
+    } else {
+      Mouse.end();
+    }
     delay(300);
   }
 

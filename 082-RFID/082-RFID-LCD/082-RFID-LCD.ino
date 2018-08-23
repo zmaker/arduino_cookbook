@@ -30,8 +30,7 @@ void setup() {
   Serial.begin(9600);
   /* Abilita SPI*/
   SPI.begin();
-  /* Viene inizilizzato RFID reader */
-  SPI.begin();           // MFRC522 Hardware uses SPI protocol
+  /* Viene inizilizzato RFID reader */  
   mfrc522.PCD_Init();    // Initialize MFRC522 Hardware
 }
 
@@ -48,13 +47,10 @@ void loop() {
   }
   //Show UID on serial monitor
   Serial.print("UID tag :");
-  String content = "";
-
+  
   for (byte i = 0; i < mfrc522.uid.size; i++) {
     Serial.print(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " ");
     Serial.print(mfrc522.uid.uidByte[i], HEX);
-    content.concat(String(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " "));
-    content.concat(String(mfrc522.uid.uidByte[i], HEX));
     digitalWrite(2, HIGH);
     delay(300);
     digitalWrite(2, LOW);
