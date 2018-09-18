@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="zepto.js"></script>
+		<script type="text/javascript">
+		    function ledon() {
+		        $.get('http://arduino.local/arduino/ledon', function(response){
+  					//
+				})
+		    }
+		    function ledoff() {
+		        $.get('http://arduino.local/arduino/ledoff', function(response){
+  					//
+				})
+		    }
+		</script>
+	</head>
+
+	<body>
+		<button onClick="">
+		<button id="bt1" onClick="ledon();">ON</button>
+		<button id="bt2" onClick="ledoff();">OFF</button>
+	</body>
+</html>

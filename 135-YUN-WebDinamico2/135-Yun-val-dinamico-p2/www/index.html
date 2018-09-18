@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="zepto.js"></script>
+		<script type="text/javascript">
+			function refresh() {
+				$('#testo1').load('/arduino/temperatura');
+			}
+		</script>
+	</head>
+
+	<body onload="setInterval(refresh, 1000);">
+		<span id="testo1">Ancora nulla...</span>
+	</body>
+</html>
