@@ -11,10 +11,8 @@ void setup() {
   Serial.println("ok");
 }
 
-void loop() {
-  stato = HIGH;
-  if (stato) {
-    
+void loop() {  
+  if (stato) {    
     int a = digitalRead(8);
     int b = digitalRead(9);
     int c = digitalRead(10);
@@ -25,7 +23,7 @@ void loop() {
     Serial.print(c);
     Serial.print(d);
     Serial.println(e);        
-    //stato = LOW;
+    stato = LOW;
   }  
   delay(100);
 }
