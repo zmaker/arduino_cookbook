@@ -46,7 +46,7 @@ float intgr(float e) {
   }
   
   float m = 0;
-  for (int j = 0; j < blen-1; j++){    
+  for (int j = 0; j < blen; j++){    
     m += buf[j];
   }
   m = m / (float)blen;  
