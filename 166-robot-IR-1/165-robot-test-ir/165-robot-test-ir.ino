@@ -13,11 +13,6 @@ unsigned long val;
 IRrecv irrecv(RECV_PIN);   //initialization
 decode_results results;   //Define structure type
 
-void stateChange() {
-  state = !state;          
-  digitalWrite(LED, state);
-}
-
 void setup() {
   pinMode(LED, OUTPUT); //initialize LED as an output
   Serial.begin(9600);  // debug output at 9600 baud
@@ -36,5 +31,10 @@ void loop() {
       delay(300);
     }
   }
+}
+
+void stateChange() {
+  state = !state;          
+  digitalWrite(LED, state);
 }
 
