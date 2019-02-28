@@ -33,26 +33,34 @@
 #include <WiFiNINA.h>
 #include <BlynkSimpleWiFiNINA.h>
 
+#include <Servo.h>
+
+Servo servo;
+
 // You should get Auth Token in the Blynk App.
 // Go to the Project Settings (nut icon).
-char auth[] = "465465465465646";
+char auth[] = "YourAuthToken";
 
 // Your WiFi credentials.
 // Set password to "" for open networks.
-char ssid[] = "wifi";
-char pass[] = "pass";
+char ssid[] = "YourNetworkName";
+char pass[] = "YourPassword";
 
-void setup() {  
-  pinMode(2, INPUT);
+void setup(){   
+  servo.attach(9); 
   Serial.begin(9600);
-  Blynk.begin(auth, ssid, pass); 
+  Blynk.begin(auth, ssid, pass);  
 }
 
 void loop() {
   Blynk.run();
 }
 
-BLYNK_READ(V2) {
-  int bt = digitalRead(2);
-  Blynk.virtualWrite(V2, bt);
+BLYNK_WRITE(V3) {
+  int pos = param.asInt();
+  servo.write(pos);  
 }
+
+
+
+

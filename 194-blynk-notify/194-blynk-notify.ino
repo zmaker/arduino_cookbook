@@ -35,7 +35,7 @@
 
 // You should get Auth Token in the Blynk App.
 // Go to the Project Settings (nut icon).
-char auth[] = "465465465465646";
+char auth[] = "token";
 
 // Your WiFi credentials.
 // Set password to "" for open networks.
@@ -54,5 +54,11 @@ void loop() {
 
 BLYNK_READ(V2) {
   int bt = digitalRead(2);
+  if (bt) {  
+    Blynk.notify("Notifica!");
+    //Blynk.email("paolo.aliverti@gmail.com", "Email da Blynk", "Hello World from Blynk.");
+    Serial.println("email inviata");
+    delay(1000);
+  }
   Blynk.virtualWrite(V2, bt);
 }
