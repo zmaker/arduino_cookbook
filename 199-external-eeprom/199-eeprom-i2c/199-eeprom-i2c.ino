@@ -1,43 +1,43 @@
-//http://www.hobbytronics.co.uk/arduino-external-eeprom
+#include <Wire.h>
+#define disk1 0x50
 
-#include <Wire.h>    
- 
-#define disk1 0x50    //Address of 24LC256 eeprom chip
- 
-void setup(void) {
+void setup() {
   Serial.begin(9600);
-  Wire.begin();  
- 
-  unsigned int address = 0;
-  Serial.println("writing EEPROM...");
-  writeEEPROM(disk1, address, 123);
-  delay(1000);
-  Serial.println("reading EEPROM...");
-  Serial.print(readEEPROM(disk1, address), DEC);
+  Wire.begin();
+
+  unsigned int addr = 0;
+  Serial.println("scrivo la EEPROM");
+  writeEEPROM(disk1, addr, 123);
+  Serial.println("leggo la EEPROM");
+  int n = readEEPROM(disk1, addr);
+  Serial.println(n);
 }
- 
-void loop(){}
- 
-void writeEEPROM(int deviceaddress, unsigned int eeaddress, byte data ) {
-  Wire.beginTransmission(deviceaddress);
-  Wire.write((int)(eeaddress >> 8));   // MSB
-  Wire.write((int)(eeaddress & 0xFF)); // LSB
+
+void loop() {}
+
+void writeEEPROM(int i2caddr, unsigned int maddr, byte data){
+  Wire.beginTransmission(i2caddr);
+  Wire.write((int)(maddr >> 8));
+  Wire.write((int)(maddr & 0xFF));
   Wire.write(data);
   Wire.endTransmission();
   delay(5);
 }
- 
-byte readEEPROM(int deviceaddress, unsigned int eeaddress ) {
-  byte rdata = 0xFF;
- 
-  Wire.beginTransmission(deviceaddress);
-  Wire.write((int)(eeaddress >> 8));   // MSB
-  Wire.write((int)(eeaddress & 0xFF)); // LSB
+
+byte readEEPROM(int i2caddr, unsigned int maddr){
+  Wire.beginTransmission(i2caddr);
+  Wire.write((int)(maddr >> 8));
+  Wire.write((int)(maddr & 0xFF)); 
   Wire.endTransmission();
- 
-  Wire.requestFrom(deviceaddress,1);
- 
-  if (Wire.available()) rdata = Wire.read();
- 
+
+  Wire.requestFrom(i2caddr, 1);
+  byte rdata = 0;
+  if (Wire.available()) {
+     rdata = Wire.read(); 
+  }
   return rdata;
 }
+
+
+
+
