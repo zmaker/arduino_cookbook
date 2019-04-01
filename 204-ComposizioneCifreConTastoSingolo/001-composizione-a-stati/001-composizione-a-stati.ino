@@ -1,22 +1,39 @@
-/**
- * Contare i click di un tasto
- */
+int stato = 0;
+String codice = "";
+int cifre = 0;
 
-void setup() {
-  Serial.begin(9600);
-  pinMode(8, INPUT);
-}
-
+//variabili sketch contaclick n.43
 bool tasto;
 bool prev_tasto;
-
 bool conteggio;
 long t0;
 long FINESTRA = 2000;
-
 int click = 0;
 
-void loop() {  
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(8, INPUT);  
+}
+
+void loop() {
+  switch(stato){
+    case 0:
+      //conteggio dei click
+      loop_contaclick();
+    break;
+    case 1:
+      //accodamento cifre
+      loop_accodacifre();
+    break;
+    case 2:
+      //chiamata
+      loop_callnumber();
+    break;  
+  }
+}
+
+void loop_contaclick(){
   tasto = digitalRead(8);
 
   if (!prev_tasto && tasto) {
@@ -48,6 +65,31 @@ void loop() {
     Serial.print("click: ");
     Serial.println(click);
     Serial.println("----------");
+    stato = 1;
   }
-  
 }
+
+void loop_accodacifre(){
+  Serial.println("accoda");
+  codice.concat(String(click)); 
+  cifre++;  
+  if (cifre < 3) {
+    stato = 0;  
+  } else {
+    stato = 2;  
+  }
+}
+
+void loop_callnumber(){
+  Serial.print("Chiamo il numero"); 
+  Serial.println(codice);
+  delay(3000);
+  stato = 0; 
+  cifre = 0;
+  codice = "";
+  Serial.println("Clicca per comporre");
+ 
+}
+
+
+
