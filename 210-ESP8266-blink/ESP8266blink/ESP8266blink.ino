@@ -2,7 +2,7 @@
 // http://arduino.esp8266.com/versions/2.5.0/package_esp8266com_index.json
 
 
-int led = 0;
+int led = 2;
 void setup() {
   pinMode(led, OUTPUT);
 }
