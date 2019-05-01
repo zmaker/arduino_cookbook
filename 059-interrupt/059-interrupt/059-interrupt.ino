@@ -7,6 +7,7 @@
 
 void setup() {
   pinMode(13, OUTPUT);
+  pinMode(3, INPUT);
   attachInterrupt(digitalPinToInterrupt(3), cambia, FALLING);
 }
 
