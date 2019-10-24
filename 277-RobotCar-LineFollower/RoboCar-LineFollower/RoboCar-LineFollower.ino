@@ -29,17 +29,18 @@ void loop() {
   Serial.print(dx);
   Serial.print("\n");
 
-  delay(100);
-
-  if(mx){
+  if (mx){
     forward();
   }
-  else if(dx) {
+  else if (dx) {
     right();
-    while(dx);
+    
   }
-  else if(sx) {
+  else if (sx) {
     left();
-    while(sx);
+    
+  }
+  if ((mx == 0) && (sx == 0) && (dx == 0)) {
+    stop();  
   }
 }

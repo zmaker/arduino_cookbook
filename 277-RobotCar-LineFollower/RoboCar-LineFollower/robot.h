@@ -8,7 +8,7 @@
 #define IN4 11
 #define ENA 6
 
-#define carSpeed 200
+#define carSpeed 100
 
 
 void forward(){
