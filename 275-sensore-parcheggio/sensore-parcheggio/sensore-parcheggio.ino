@@ -1,4 +1,4 @@
-//HC RS04 Sensore ultrasuoni
+//HR04 Sensore ultrasuoni
 
 const int triggerPort = 6;
 const int echoPort = 7;
