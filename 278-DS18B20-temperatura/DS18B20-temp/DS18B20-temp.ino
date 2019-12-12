@@ -1,7 +1,7 @@
 #include <OneWire.h>
 #include <DallasTemperature.h>
 
-OneWire oneWire(5);
+OneWire oneWire(8);
 DallasTemperature temp(&oneWire);
 
 float tc = 0;
