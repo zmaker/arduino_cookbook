@@ -15,18 +15,18 @@ DS1307 rtc;
 
 unsigned long t1, dt1, t2, dt2;
 
+unsigned long t4, dt4;
 int terra;
 int th_terra = 100;
 bool POMPA;
-unsigned long t4, dt4;
 int t_on_pompa = 1000;
 int statopompa = LOW;
 
+unsigned long t3, dt3;
 int tbed;
 int th1_bed = 700;
 int th2_bed = 660;
 bool BED = LOW;
-unsigned long t3, dt3;
 int t_on_bed = 1000;
 int statobed = LOW;
 
@@ -60,7 +60,7 @@ static const unsigned char PROGMEM logo8_moon_bmp[] =
   B00110010, 
   B00011100 };
 
-static const unsigned char PROGMEM logo8_light_bmp[] =
+ static const unsigned char PROGMEM logo8_light_bmp[] =
 { B00011000, 
   B01100110,
   B10000001, 
@@ -117,11 +117,13 @@ void setup() {
   display.clearDisplay();  
   
   pinMode(PIN_LAMP, OUTPUT);  //luce
-  pinMode(PIN_BED, OUTPUT);  //piano
-  pinMode(PIN_POMPA, OUTPUT);  //pompa
-  
+  pinMode(PIN_BED, OUTPUT);
+  pinMode(PIN_POMPA, OUTPUT);
+
+  digitalWrite(PIN_LAMP, LOW);
+  digitalWrite(PIN_BED, LOW);
   digitalWrite(PIN_POMPA, LOW);
-  
+    
   leggiOra();
   leggiLuce();
   leggiTemperaturaBed();
@@ -140,33 +142,30 @@ void loop() {
     leggiTemperaturaBed();
     leggiTerra();
   }
-  
   dt2 = millis() - t2;
   if (dt2 >= 200) {
     t2 = millis();
     aggiornaDisplay(luce); 
   }
 
-  if (BED) { 
-    //se devo scaldare il piano attivo un processo
-    //che accende e spegne di continuo il piano
+  if (BED) {
     dt3 = millis() - t3;
     if (dt3 >= t_on_bed) {
       t3 = millis();
       statobed = !statobed;
       if (statobed) {
-        digitalWrite(PIN_BED, HIGH);
+        digitalWrite(PIN_BED, HIGH);  
         t_on_bed = 1000;
       } else {
         digitalWrite(PIN_BED, LOW);
         t_on_bed = 3000;
-      }
+      } 
     }  
   }
 
-  if (POMPA) { 
+  if (POMPA) {
     dt4 = millis() - t4;
-    if (dt4 >= t_on_pompa) {
+    if (dt4 > t_on_pompa) {
       t4 = millis();
       statopompa = !statopompa;
       if (statopompa) {
@@ -176,26 +175,44 @@ void loop() {
         digitalWrite(PIN_POMPA, LOW);
         t_on_pompa = 10000;
       }
-    }
+    }  
   }
 
+  //applico le azioni
   digitalWrite(PIN_LAMP, LAMP);
   
 }
 
-void leggiTemperaturaBed(){
+void leggiTerra(){
+  terra = 0;
   for (int i = 0; i < 10; i++) {
-    tbed += analogRead(A2);
+    terra += analogRead(A1);  
+  } 
+  terra = terra / 10;
+
+  if (GIORNO) {
+    if (terra < th_terra) {
+      POMPA = HIGH;
+    } else {
+      POMPA = LOW;
+      digitalWrite(PIN_POMPA, LOW);
+    }
+  }
+}
+
+void leggiTemperaturaBed() {
+  tbed = 0;
+  for (int i = 0; i < 10; i++) {
+    tbed += analogRead(A2);  
   }
   tbed = tbed / 10;
   tbed = map(tbed, 0, 1024, 1024, 0);
-  
-  if (tbed < th1_bed) {  //tbed dimininuisce con la temp!
-      BED = HIGH;
+
+  if (tbed < th1_bed) {
+    BED = HIGH;
   } else if (tbed > th2_bed) {
-      digitalWrite(PIN_BED, LOW);
-      BED = LOW;
-  }
+    BED = LOW;
+  }  
 }
 
 void leggiLuce() {
@@ -208,25 +225,8 @@ void leggiLuce() {
   if (GIORNO) {  
     if (luce > th1_luce) {
       LAMP = LOW;
-      digitalWrite(PIN_LAMP, LOW);
     } else if (luce < th2_luce) {
       LAMP = HIGH;
-    }
-  }
-}
-
-void leggiTerra(){
-  for (int i = 0; i < 10; i++) {
-    terra += analogRead(A1);
-  }
-  terra = terra / 10;
-  Serial.println(terra);  
-  if (GIORNO) {  
-    if (terra < th_terra)  {
-      POMPA = HIGH;
-    } else  {
-      POMPA = LOW;
-      digitalWrite(PIN_POMPA, LOW);
     }
   }
 }
