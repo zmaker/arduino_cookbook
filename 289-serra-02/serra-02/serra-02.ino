@@ -118,6 +118,9 @@ void leggiLuce() {
     } else if (luce < th2_luce) {
       LAMP = HIGH;
     }
+  } else {
+    LAMP = LOW;
+    digitalWrite(PIN_LAMP, LOW);
   }
 }
 

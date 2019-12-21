@@ -185,6 +185,8 @@ void loop() {
         t_on_bed = 3000;
       }
     }  
+  } else {
+    digitalWrite(PIN_BED, LOW);
   }
 
   if (POMPA) { 
@@ -251,6 +253,9 @@ void leggiLuce() {
     } else if (luce < th2_luce) {
       LAMP = HIGH;
     }
+  } else {
+    LAMP = LOW;
+    digitalWrite(PIN_LAMP, LOW);
   }
 }
 
@@ -267,6 +272,9 @@ void leggiTerra(){
       POMPA = LOW;
       digitalWrite(PIN_POMPA, LOW);
     }
+  } else {
+    POMPA = LOW;
+    digitalWrite(PIN_POMPA, LOW);
   }
 }
 
