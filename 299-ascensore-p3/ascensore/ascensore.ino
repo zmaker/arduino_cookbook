@@ -124,7 +124,7 @@ void verificoComandi(){
     callstato(0);
   } else {
     ordina(s, lsz);
-    ordina(d, lsz);
+    ordina2(d, lsz);
     stampa(s, lsz);
     stampa(d, lsz);
     level = chooseLevel();
@@ -195,6 +195,30 @@ void ordina (int lista[], int lsize) {
   }
 }
 
+void ordina2 (int lista[], int lsize) {
+  int c = 0;
+  while (c < lsize){
+    int m = 0; //serve per interrompere l'esecuzione
+    //quando la lista è già ordinata
+
+    int i = 0;
+    while (i < (lsize - 1) ){
+      if (lista[i] < lista[i+1]){
+        //effettuo lo scambio
+        int n = lista[i];
+        lista[i] = lista[i+1];
+        lista[i+1] = n;
+        //se ho scambiato numeri, incremento m
+        m++;
+      } 
+      i++;
+    }    
+    //se m = 0 allora l'array è ordinato e quindi mi fermo
+    if (m == 0) break;    
+    c++;
+  }
+}
+
 int chooseLevel(){
   int ans = 0;
   int i = 0;
@@ -211,7 +235,7 @@ int chooseLevel(){
     }
     ans = d[i];
     d[i] = 0;
-    ordina(d, lsz);
+    ordina2(d, lsz);
   }
   return ans;
 }
