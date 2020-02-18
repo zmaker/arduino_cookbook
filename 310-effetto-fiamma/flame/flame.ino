@@ -1,5 +1,5 @@
 void setup(void) {
-  randomSeed(A0);
+  randomSeed(analogRead(A0));
 }
 
 unsigned long t1, dt;
