@@ -23,7 +23,7 @@ float lr = 0.1;
 
 //cosa vogliamo fare apprendere alla rete?
 static const int numTrainingSets = 4;
-static const int learning_cycles = 10000;
+static const long learning_cycles = 40000;
 float training_inputs[numTrainingSets][numInputs] = { 
   {0.0f,0.0f},
   {1.0f,0.0f},
@@ -73,7 +73,7 @@ void setup() {
   
   Serial.println("Siate pazienti... ci vuole molto!");  
   //Fase di ISTRUZIONE della RETE
-  for (int n=0; n < learning_cycles; n++) { 
+  for (long n=0; n < learning_cycles; n++) { 
       //sorteggio un set di apprendimento
       int idSet = random(0, 4);
       //lo propago
@@ -105,6 +105,7 @@ void loop() {
     for (int j=0; j<numOutputs; j++) {
       Serial.print("Y = ");
       Serial.println(outputLayer[j]);
+      analogWrite(11, map(outputLayer[j]*1000, 0, 1000, 0, 255));
     }
     delay(1000);
   }
@@ -120,16 +121,7 @@ void propagate(int i){
     }
     hiddenLayer[j] = sigmoid(activation);
   }
-      
-  /*for (int j=0; j<numHiddenNodes; j++) {
-      float activation=hiddenLayerBias[j];
-      for (int k=0; k<numInputs; k++) {
-          activation+=training_inputs[i][k]*hiddenWeights[k][j];
-      }
-      hiddenLayer[j] = sigmoid(activation);
-    }
-  */
-
+    
   // per l'uscita (o le uscite)
   for (int j=0; j<numOutputs; j++) {
     float activation=outputLayerBias[j];
