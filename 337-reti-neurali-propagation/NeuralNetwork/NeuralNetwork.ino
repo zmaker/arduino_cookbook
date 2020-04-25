@@ -1,6 +1,12 @@
 /**
  * Rete neurale con Arduino
  * Ingressi su A0 e A1
+ * 
+ * LINK da cui ho recuperato informazioni e codice
+ * https://enlight.nyc/projects/neural-network/
+ * https://towardsdatascience.com/how-to-build-your-own-neural-network-from-scratch-in-python-68998a08e4f6
+ * https://towardsdatascience.com/back-propagation-demystified-in-7-minutes-4294d71a04d7
+ * https://towardsdatascience.com/simple-neural-network-implementation-in-c-663f51447547
  */
 
 //nodi d'ingresso
@@ -12,13 +18,13 @@ static const int numOutputs = 1;
 
 //gli array con i valori di uscita e i pesi
 float hiddenLayer[numHiddenNodes];
-float outputLayer[numOutputs];
 float hiddenLayerBias[numHiddenNodes];
-float outputLayerBias[numOutputs];
 float hiddenWeights[numInputs][numHiddenNodes];
+float outputLayer[numOutputs];
+float outputLayerBias[numOutputs];
 float outputWeights[numHiddenNodes][numOutputs];
 
-//learning rate
+//learning rate (per non applicare le correzioni ai pesi, "intere" - darebbe instabilità)
 float lr = 0.1;
 
 //cosa vogliamo fare apprendere alla rete?
@@ -45,25 +51,6 @@ float dSigmoid(float x) {
   return (x*(1-x));
 }
 
-//inizializza i pesi e i bias con numeri casuali (tra 0 e 1)
-void initw(){
-  randomSeed(analogRead(A3));
-  //livello hidden
-  for (int j = 0; j < numHiddenNodes; j++) {
-    hiddenLayerBias[j] = ((float)random(0,1000))/1000.0;
-    for (int k = 0; k < numInputs; k++) {
-      hiddenWeights[k][j] = ((float)random(0,1000))/1000.0;
-    }
-  }
-  //livello di uscita
-  for (int j = 0; j < numOutputs; j++) {
-    outputLayerBias[j] = ((float)random(0,1000))/1000.0;
-    for (int k = 0; k < numHiddenNodes; k++) {
-      outputWeights[k][j] = ((float)random(0,1000))/1000.0;
-    }
-  }
-}
-
 void setup() {
   Serial.begin(9600);
   pinMode(2, INPUT);
@@ -73,7 +60,7 @@ void setup() {
   
   Serial.println("Siate pazienti... ci vuole molto!");  
   //Fase di ISTRUZIONE della RETE
-  for (long n=0; n < learning_cycles; n++) { 
+  for (long n = 0; n < learning_cycles; n++) { 
       //sorteggio un set di apprendimento
       int idSet = random(0, 4);
       //lo propago
@@ -105,23 +92,45 @@ void loop() {
     for (int j=0; j<numOutputs; j++) {
       Serial.print("Y = ");
       Serial.println(outputLayer[j]);
-      analogWrite(11, map(outputLayer[j]*1000, 0, 1000, 0, 255));
+      int pwm = outputLayer[j] * 255;
+      analogWrite(11, pwm);
     }
     delay(1000);
   }
 }
 
+//inizializza i pesi e i bias con numeri casuali (tra 0 e 1)
+void initw(){
+  randomSeed(analogRead(A3));
+  //livello hidden
+  for (int j = 0; j < numHiddenNodes; j++) {
+    hiddenLayerBias[j] = ((float)random(0,1000))/1000.0;
+    for (int k = 0; k < numInputs; k++) {
+      hiddenWeights[k][j] = ((float)random(0,1000))/1000.0;
+    }
+  }
+  //livello di uscita
+  for (int j = 0; j < numOutputs; j++) {
+    outputLayerBias[j] = ((float)random(0,1000))/1000.0;
+    for (int k = 0; k < numHiddenNodes; k++) {
+      outputWeights[k][j] = ((float)random(0,1000))/1000.0;
+    }
+  }
+}
+
 void propagate(int i){ 
-  // scelto il pattern i, lo propago 
+  // scelto il pattern i-esimo, lo propago 
   // Per tutti i nodi Hidden:
   for (int j = 0; j < numHiddenNodes; j++) {
     float activation = hiddenLayerBias[j];
     for (int k = 0; k < numInputs; k++){
+      //sommatoria degli ingressi * i pesi
       activation += training_inputs[i][k] * hiddenWeights[k][j];
     }
+    //applico la sigmoide
     hiddenLayer[j] = sigmoid(activation);
   }
-    
+      
   // per l'uscita (o le uscite)
   for (int j=0; j<numOutputs; j++) {
     float activation=outputLayerBias[j];
@@ -142,7 +151,8 @@ void learn(int i) {
     //errore preso pari alla diff tra valore ottenuto nella propagazione e 
     //valore desiderato
     float error = (training_outputs[i][j] - outputLayer[j]);
-    //questo è l'errore portato all'ingresso del nodo di uscita
+    //questo è il valore da usare per correggere i pesi.
+    //l'errore portato all'ingresso del nodo di uscita
     deltaOutput[j] = error * dSigmoid(outputLayer[j]);
   } 
   
