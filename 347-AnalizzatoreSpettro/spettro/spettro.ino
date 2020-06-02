@@ -22,8 +22,8 @@ void setup() {
 
 void loop() {
   for (int i = 0; i < samples; i++) {
-    vReal[0] = analogRead(A0); 
-    vImag[0] = 0;
+    vReal[i] = analogRead(A0); 
+    vImag[i] = 0;
   }
 
   FFT.Windowing(vReal, samples, FFT_WIN_TYP_HAMMING, FFT_FORWARD);
