@@ -1,0 +1,5 @@
+{
+    "board": "arduino:avr:uno",
+    "port": "COM4",
+    "sketch": "bmp280_example.ino"
+}

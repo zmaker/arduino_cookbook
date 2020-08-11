@@ -1,0 +1,6 @@
+{
+    "port": "COM3",
+    "programmer": "AVRISP mkII",
+    "board": "arduino:avr:uno",
+    "sketch": "Grove_Starter_Kit.ino"
+}
