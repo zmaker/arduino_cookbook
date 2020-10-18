@@ -1,3 +1,8 @@
+/**
+ * La libreria LEDControl è reperibile qui:
+ * http://wayoda.github.io/LedControl/
+ * Oppure nel library manager come: LedControl di Eberhard Fahle
+ */
 #include "LedControl.h"
 #include "caratteri.h"
 
@@ -48,4 +53,3 @@ void loop() {
   }
   
 }
-
