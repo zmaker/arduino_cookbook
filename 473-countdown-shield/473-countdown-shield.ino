@@ -40,7 +40,7 @@ void loop() {
 
 bool tasto;
 bool prev_tasto;
-long dt,t0; //memorizza il numero di millis a inizio conteggio
+unsigned long dt,t0; //memorizza il numero di millis a inizio conteggio
 
 void setcounter(){
   if (!digitalRead(A3)) {
