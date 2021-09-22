@@ -11,7 +11,7 @@ WiFiSSLClient client;
 
 #include <UniversalTelegramBot.h>
 #include <ArduinoJson.h>
-const char* BotToken = "1900613751:AAFCSiTeF59uEZfPnf0JJn8HO1dIy0F4C_Y";    // your Bot Teken  
+const char* BotToken = "xxxx";    // your Bot Teken  
 UniversalTelegramBot bot(BotToken, client);
 
 const int ledPin = 2; 
