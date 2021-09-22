@@ -4,14 +4,14 @@
 #include <SPI.h>
 #include <WiFiNINA.h>
 
-char ssid[] = "www.reelco.it";
-char pass[] = "cardu450IX"; 
+char ssid[] = "";
+char pass[] = ""; 
 int status = WL_IDLE_STATUS;
 WiFiSSLClient client;
 
 #include <UniversalTelegramBot.h>
 #include <ArduinoJson.h>
-const char* BotToken = "1900613751:AAFCSiTeF59uEZfPnf0JJn8HO1dIy0F4C_Y";    // your Bot Teken  
+const char* BotToken = "";    // your Bot Teken  
 UniversalTelegramBot bot(BotToken, client);
 
 const int ledPin = 2; 

@@ -4,8 +4,8 @@
 #include <SPI.h>
 #include <WiFiNINA.h>
 
-char ssid[] = "www.reelco.it";
-char pass[] = "cardu450IX"; 
+char ssid[] = "";
+char pass[] = ""; 
 int status = WL_IDLE_STATUS;
 WiFiSSLClient client;
 
