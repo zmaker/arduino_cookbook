@@ -7,7 +7,7 @@ int status = WL_IDLE_STATUS;
 WiFiSSLClient client;
 
 #include <TelegramBot.h>  
-const char* BotToken = "1900613751:AAFCSiTeF59uEZfPnf0JJn8HO1dIy0F4C_Y";    // your Bot Teken  
+const char* BotToken = "xxxx";    // your Bot Teken  
 TelegramBot bot(BotToken,client);  
 
 const int ledPin = 2; 
