@@ -36,7 +36,7 @@ void wakeUpNow() { // THE PROGRAM CONTINUES FROM HERE AFTER WAKING UP    (i.e. a
 
 void setup() {
   pinMode(2, INPUT); 
-  pinMode(7, OUTPUT); 
+  pinMode(8, OUTPUT); 
   xl.begin(); 
   Serial.begin(9600);
   delay(1000);
@@ -55,6 +55,7 @@ void setup() {
   // Map Awake status to Interrupt 1
   // *** create a function to map interrupts... coming soon
   xl.SPIwriteOneRegister(0x2A, 0x40);   
+  //xl.SPIwriteOneRegister(0x2B, 0x40);   
 
   // Setup Activity/Inactivity register
   xl.SPIwriteOneRegister(0x27, 0x3F); // Referenced Activity, Referenced Inactivity, Loop Mode  
@@ -84,11 +85,11 @@ void loop() {
   if (digitalRead(2)) {
     // if ADXL362 is awake, report XYZT data to Serial Monitor
     delay(10);
-    digitalWrite(7, HIGH);    // Turn on LED as visual indicator of awake
+    digitalWrite(8, HIGH);    // Turn on LED as visual indicator of awake
     //xl.readXYZTData(XValue, YValue, ZValue, Temperature); 
   } else {
     Serial.print("\nADXL went to sleep - Put Arduino to sleep now \n");
-    digitalWrite(7, LOW);    // Turn off LED as visual indicator of asleep
+    digitalWrite(8, LOW);    // Turn off LED as visual indicator of asleep
     delay(100);
     sleepNow(); // sleep function called here
   }
