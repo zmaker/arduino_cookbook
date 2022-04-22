@@ -26,8 +26,12 @@ unsigned long t1;
 
 void setup() {
   Serial.begin(9600);
+
+  int i = 0;
   while (!Serial) {
-    ; // wait for serial port to connect. Needed for native USB port only
+    delay(100);
+    i++;
+    if (i >= 10) break;
   }
 
   if (WiFi.status() == WL_NO_MODULE) {
