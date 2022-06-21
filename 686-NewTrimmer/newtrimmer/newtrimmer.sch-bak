@@ -1,0 +1,101 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x03 J2
+U 1 1 6290E3E7
+P 3550 2200
+F 0 "J2" H 3630 2242 50  0000 L CNN
+F 1 "Conn_01x03" H 3630 2151 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 3550 2200 50  0001 C CNN
+F 3 "~" H 3550 2200 50  0001 C CNN
+	1    3550 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J1
+U 1 1 6290F3F0
+P 2200 2200
+F 0 "J1" H 2118 1875 50  0000 C CNN
+F 1 "Conn_01x03" H 2118 1966 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 2200 2200 50  0001 C CNN
+F 3 "~" H 2200 2200 50  0001 C CNN
+	1    2200 2200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_POT_TRIM RV1
+U 1 1 6290FEFC
+P 2850 2100
+F 0 "RV1" V 2643 2100 50  0000 C CNN
+F 1 "R_POT_TRIM" V 2734 2100 50  0000 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Piher_PT-10-V05_Vertical" H 2850 2100 50  0001 C CNN
+F 3 "~" H 2850 2100 50  0001 C CNN
+	1    2850 2100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2400 2100 2550 2100
+Wire Wire Line
+	2400 2200 2500 2200
+Wire Wire Line
+	2650 2200 2650 2250
+Wire Wire Line
+	2650 2250 2850 2250
+Wire Wire Line
+	2400 2300 3000 2300
+Wire Wire Line
+	3000 2300 3000 2100
+Wire Wire Line
+	3000 2100 3350 2100
+Connection ~ 3000 2100
+Wire Wire Line
+	2850 2250 3200 2250
+Wire Wire Line
+	3200 2250 3200 2200
+Wire Wire Line
+	3200 2200 3350 2200
+Connection ~ 2850 2250
+Wire Wire Line
+	2550 2100 2550 1850
+Wire Wire Line
+	2550 1850 3250 1850
+Wire Wire Line
+	3250 1850 3250 2300
+Wire Wire Line
+	3250 2300 3350 2300
+Connection ~ 2550 2100
+Wire Wire Line
+	2550 2100 2700 2100
+$Comp
+L Connector:Conn_01x02_Male J?
+U 1 1 62915CF3
+P 2400 2600
+F 0 "J?" V 2554 2412 50  0000 R CNN
+F 1 "Conn_01x02_Male" V 2463 2412 50  0000 R CNN
+F 2 "" H 2400 2600 50  0001 C CNN
+F 3 "~" H 2400 2600 50  0001 C CNN
+	1    2400 2600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2400 2300 2400 2400
+Connection ~ 2400 2300
+Wire Wire Line
+	2500 2200 2500 2400
+Connection ~ 2500 2200
+Wire Wire Line
+	2500 2200 2650 2200
+$EndSCHEMATC
