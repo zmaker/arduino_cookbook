@@ -1,5 +1,4 @@
 #include <SoftwareSerial.h>
-#include "secrets.h"
 
 #define CTRL_Z 26
 
