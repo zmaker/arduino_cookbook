@@ -12,7 +12,7 @@ Adafruit_MAX31865 thermo = Adafruit_MAX31865(10);
 // 100.0 for PT100, 1000.0 for PT1000
 #define RNOMINAL  100.0
 
-double ki=20, kp=3, kd=1;
+double kp=20, ki=3, kd=1;
 double ingresso, uscita, setpoint;
 int winsize = 5000;
 unsigned long winstart;
@@ -23,7 +23,7 @@ void setup() {
   pinMode(6, OUTPUT);
   Serial.begin(9600);
   thermo.begin(MAX31865_2WIRE);  // set to 3WIRE or 4WIRE as necessary
-  setpoint = 35.0;
+  setpoint = 40.0;
   pid.SetOutputLimits(0, winsize);
   pid.SetMode(AUTOMATIC);
 }
@@ -41,5 +41,5 @@ void loop() {
   } else {
     digitalWrite(6, HIGH);
   }
-  delay(200);
+  
 }
