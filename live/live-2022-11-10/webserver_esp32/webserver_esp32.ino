@@ -8,6 +8,8 @@ void setup() {
   delay(1000);
 
   analogReadResolution(10);
+  
+  WiFi.disconnect(true);
 
   WiFi.begin(WIFI_SSID, WIFI_PASS);
 
