@@ -6,7 +6,7 @@
 // Use software SPI: CS, DI, DO, CLK
 //Adafruit_MAX31865 thermo = Adafruit_MAX31865(10, 11, 12, 13);
 // use hardware SPI, just pass in the CS pin
-Adafruit_MAX31865 thermo = Adafruit_MAX31865(10);
+Adafruit_MAX31865 thermo = Adafruit_MAX31865(A2);
 
 // The value of the Rref resistor. Use 430.0 for PT100 and 4300.0 for PT1000
 #define RREF      430.0
@@ -16,6 +16,13 @@ Adafruit_MAX31865 thermo = Adafruit_MAX31865(10);
 
 void setup() {
   Serial.begin(9600);
+  pinMode(A1, OUTPUT);
+  pinMode(A2, OUTPUT);
+  digitalWrite(A1, HIGH);  
+  delay(100);
+  digitalWrite(A1, LOW);
+  delay(100);
+  
   thermo.begin(MAX31865_2WIRE);  // set to 3WIRE or 4WIRE as necessary
 }
 
