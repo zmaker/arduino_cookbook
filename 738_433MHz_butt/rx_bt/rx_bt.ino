@@ -9,7 +9,7 @@ uint8_t buf[10];
 uint8_t buflen = 10;
 
 void setup() {
-  pinMode(2, OUTPUT);
+  pinMode(4, OUTPUT);
     Serial.begin(9600);  // Debugging only
     if (!driver.init())
          Serial.println("init failed");
@@ -22,9 +22,9 @@ void loop() {
       Serial.print(" : ");Serial.println(buf[0]);
       
       if (buf[0] == 1) {
-        digitalWrite(2, HIGH);  
+        digitalWrite(4, HIGH);  
       } else {
-        digitalWrite(2, LOW);  
+        digitalWrite(4, LOW);  
       }
     }
 }
