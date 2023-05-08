@@ -16,7 +16,7 @@ void setup() {
   pinMode(2, INPUT); //BT1
   pinMode(4, INPUT); //BT2
   
-  pinMode(3, INPUT); //RTX
+  pinMode(3, OUTPUT); //RTX
 
   rs485.begin(4800);
 }

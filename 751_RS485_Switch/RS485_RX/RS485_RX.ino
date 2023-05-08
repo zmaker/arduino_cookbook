@@ -12,7 +12,7 @@ void setup() {
   pinMode(4, OUTPUT); //led1
   pinMode(5, OUTPUT); //led2
   
-  pinMode(3, INPUT); //RTX
+  pinMode(3, OUTPUT); //RTX
   digitalWrite(3, LOW);
   
   rs485.begin(4800);
