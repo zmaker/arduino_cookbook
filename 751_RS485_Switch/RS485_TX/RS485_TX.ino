@@ -33,7 +33,7 @@ void loop() {
     dati[0] = 10; //addr
     dati[1] = 4;  //fun
     dati[2] = led1;   //val
-    dati[0] = 0;
+    dati[3] = 0;
     rs485.write(dati, sizeof(dati));
     delay(1);
     digitalWrite(3, LOW);
@@ -47,7 +47,7 @@ void loop() {
     dati[0] = 10; //addr
     dati[1] = 5;  //fun
     dati[2] = led2;   //val
-    dati[0] = 0;
+    dati[3] = 0;
     rs485.write(dati, sizeof(dati));
     delay(1);
     digitalWrite(3, LOW);
