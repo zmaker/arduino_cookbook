@@ -13,7 +13,7 @@ function checkEvents(){
   var cal = CalendarApp.getCalendarsByName(_calendarName)[0];
   console.log("calname: " + _calendarName);
   if (!cal) {
-    return {status: 'error', message: 'Error, calendar "' + calendarName + '" does not exist.'};
+    return {status: 'error', message: 'Error, calendar "' + _calendarName + '" does not exist.'};
   }
   
   var t1 = new Date();
