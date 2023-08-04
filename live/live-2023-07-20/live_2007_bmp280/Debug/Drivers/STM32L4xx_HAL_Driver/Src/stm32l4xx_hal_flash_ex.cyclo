@@ -1,0 +1,15 @@
+stm32l4xx_hal_flash_ex.c:125:19:HAL_FLASHEx_Erase	9
+stm32l4xx_hal_flash_ex.c:228:19:HAL_FLASHEx_Erase_IT	6
+stm32l4xx_hal_flash_ex.c:297:19:HAL_FLASHEx_OBProgram	11
+stm32l4xx_hal_flash_ex.c:368:6:HAL_FLASHEx_OBGetConfig	4
+stm32l4xx_hal_flash_ex.c:504:13:FLASH_MassErase	2
+stm32l4xx_hal_flash_ex.c:551:6:FLASH_PageErase	1
+stm32l4xx_hal_flash_ex.c:594:6:FLASH_FlushCaches	5
+stm32l4xx_hal_flash_ex.c:651:26:FLASH_OB_WRPConfig	4
+stm32l4xx_hal_flash_ex.c:727:26:FLASH_OB_RDPConfig	2
+stm32l4xx_hal_flash_ex.c:771:26:FLASH_OB_UserConfig	15
+stm32l4xx_hal_flash_ex.c:991:26:FLASH_OB_PCROPConfig	3
+stm32l4xx_hal_flash_ex.c:1122:13:FLASH_OB_GetWRP	3
+stm32l4xx_hal_flash_ex.c:1164:17:FLASH_OB_GetRDP	3
+stm32l4xx_hal_flash_ex.c:1190:17:FLASH_OB_GetUser	1
+stm32l4xx_hal_flash_ex.c:1213:13:FLASH_OB_GetPCROP	2

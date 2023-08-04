@@ -1,0 +1,2 @@
+stm32l4xx_hal_flash_ramfunc.c:91:30:HAL_FLASHEx_EnableRunPowerDown	1
+stm32l4xx_hal_flash_ramfunc.c:105:30:HAL_FLASHEx_DisableRunPowerDown	1

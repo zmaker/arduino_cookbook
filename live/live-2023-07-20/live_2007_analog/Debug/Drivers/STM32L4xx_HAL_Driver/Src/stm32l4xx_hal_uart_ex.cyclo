@@ -1,0 +1,12 @@
+stm32l4xx_hal_uart_ex.c:170:19:HAL_RS485Ex_Init	5
+stm32l4xx_hal_uart_ex.c:276:13:HAL_UARTEx_WakeupCallback	1
+stm32l4xx_hal_uart_ex.c:392:19:HAL_UARTEx_EnableClockStopMode	3
+stm32l4xx_hal_uart_ex.c:411:19:HAL_UARTEx_DisableClockStopMode	3
+stm32l4xx_hal_uart_ex.c:439:19:HAL_MultiProcessorEx_AddressLength_Set	2
+stm32l4xx_hal_uart_ex.c:477:19:HAL_UARTEx_StopModeWakeUpSourceConfig	4
+stm32l4xx_hal_uart_ex.c:532:19:HAL_UARTEx_EnableStopMode	3
+stm32l4xx_hal_uart_ex.c:551:19:HAL_UARTEx_DisableStopMode	3
+stm32l4xx_hal_uart_ex.c:765:19:HAL_UARTEx_ReceiveToIdle	21
+stm32l4xx_hal_uart_ex.c:890:19:HAL_UARTEx_ReceiveToIdle_IT	8
+stm32l4xx_hal_uart_ex.c:952:19:HAL_UARTEx_ReceiveToIdle_DMA	8
+stm32l4xx_hal_uart_ex.c:1015:13:UARTEx_Wakeup_AddressConfig	1

@@ -1,0 +1,16 @@
+stm32l4xx_hal_pwr.c:86:6:HAL_PWR_DeInit	1
+stm32l4xx_hal_pwr.c:104:6:HAL_PWR_EnableBkUpAccess	1
+stm32l4xx_hal_pwr.c:114:6:HAL_PWR_DisableBkUpAccess	1
+stm32l4xx_hal_pwr.c:311:19:HAL_PWR_ConfigPVD	5
+stm32l4xx_hal_pwr.c:357:6:HAL_PWR_EnablePVD	1
+stm32l4xx_hal_pwr.c:366:6:HAL_PWR_DisablePVD	1
+stm32l4xx_hal_pwr.c:391:6:HAL_PWR_EnableWakeUpPin	1
+stm32l4xx_hal_pwr.c:412:6:HAL_PWR_DisableWakeUpPin	1
+stm32l4xx_hal_pwr.c:444:6:HAL_PWR_EnterSLEEPMode	6
+stm32l4xx_hal_pwr.c:523:6:HAL_PWR_EnterSTOPMode	2
+stm32l4xx_hal_pwr.c:556:6:HAL_PWR_EnterSTANDBYMode	1
+stm32l4xx_hal_pwr.c:582:6:HAL_PWR_EnableSleepOnExit	1
+stm32l4xx_hal_pwr.c:595:6:HAL_PWR_DisableSleepOnExit	1
+stm32l4xx_hal_pwr.c:609:6:HAL_PWR_EnableSEVOnPend	1
+stm32l4xx_hal_pwr.c:622:6:HAL_PWR_DisableSEVOnPend	1
+stm32l4xx_hal_pwr.c:636:13:HAL_PWR_PVDCallback	1
