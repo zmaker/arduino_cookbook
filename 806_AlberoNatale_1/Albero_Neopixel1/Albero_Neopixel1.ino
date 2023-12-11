@@ -42,7 +42,7 @@ void loop() {
 
   for (int j = 0; j < 100; j++) {
     for (int i = 0; i < NUM_LEDS; i++) {
-      leds[i].fadeToBlackBy(10);
+      leds[i] = leds[i].fadeToBlackBy(10);
     }
     delay(10);
     FastLED.show();
