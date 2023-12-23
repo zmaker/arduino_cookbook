@@ -16,6 +16,7 @@ void setup() {
     Serial.println("errore mp3");
     for(;;);  
   }
+  Serial.println("ok");
 
   nfiles = mp3.readFileCounts();
   Serial.println(nfiles);
