@@ -44,6 +44,5 @@ void loop() {
     Serial.print("click: ");
     Serial.println(click);
     Serial.println("----------");
-  }
-  
-}﻿
+  } 
+}
