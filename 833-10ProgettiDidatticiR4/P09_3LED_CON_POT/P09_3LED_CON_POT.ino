@@ -38,7 +38,7 @@ void loop() {
   //per il LED corrente leggo l'intensità
   int val = analogRead(A0);
   //la salvo nell'array
-  lumi[led_corrente] = val;
+  lumi[led_corrente] = map(val, 0, 1023, 0, 255);
   //la applico
   analogWrite(led[led_corrente], lumi[led_corrente]);
 }
