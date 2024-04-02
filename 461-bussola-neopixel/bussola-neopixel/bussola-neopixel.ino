@@ -3,8 +3,8 @@
  * 
  * GY-273 con QMC5883L
  * 
+ libreria
  * https://github.com/mechasolution/Mecha_QMC5883L
- * https://img.filipeflop.com/files/download/Datasheet-QMC5883L-1.0%20.pdf
  */
 
 #include <FastLED.h>
