@@ -1,7 +1,9 @@
+//fun con puntatore
 void f1(int *a) {
   *a = 100;
 }
 
+//fun con reference
 void f2(int &b) {
   b = 200;
 }
