@@ -8,8 +8,8 @@
 #define BOARD_NAME "myesp32"
 
 //PARAMETI WIFI
-#define WIFI_SSID "Vodafone-A88065038"
-#define WIFI_PASSWORD "kk3ectle7wy6epk5"
+#define WIFI_SSID ""
+#define WIFI_PASSWORD ""
 
 // PARAMETRI MQTT
 #define BROKER_ADDRESS "broker.hivemq.com"
