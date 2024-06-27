@@ -1,3 +1,3 @@
-#define SECRET_SSID "Vodafone-zmhome"
-#define SECRET_PASS "*1000balene"
+#define SECRET_SSID "...."
+#define SECRET_PASS "....."
 

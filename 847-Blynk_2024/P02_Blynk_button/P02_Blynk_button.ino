@@ -3,9 +3,9 @@
 #define BLYNK_PRINT Serial
 
 /* Fill in information from Blynk Device Info here */
-#define BLYNK_TEMPLATE_ID "TMPL4qQTsMxVz"
+#define BLYNK_TEMPLATE_ID "...."
 #define BLYNK_TEMPLATE_NAME "ProgettoTutorial"
-#define BLYNK_AUTH_TOKEN "6RNuhsQdjLmlNBm84gDlgKvs8yqO_iwb"
+#define BLYNK_AUTH_TOKEN "..."
 
 #include <SPI.h>
 #include <WiFiS3.h>
