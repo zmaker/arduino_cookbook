@@ -33,7 +33,7 @@ void loop() {
       break;
     case 99:
       //stop di emergenza premuto
-      stopfase();
+      // entro ed esco via interrupt
       break;
   }
 }
@@ -69,31 +69,18 @@ void fase2() {
 }
 
 void stopCiclo() {
-  if ((stato != 0) && (stato != 99)) {
+  if ((stato == 1) || (stato == 2)) {
     stato_di_provenienza = stato;
     tempo_trascorso = dt;
     stato = 99;
-  }
-}
-
-bool primo_ingresso = true;
-
-void stopfase() {
-  if (primo_ingresso) {
     Serial.println("STOP!");
     Serial.print("arriva da: ");
     Serial.println(stato_di_provenienza);    
-    primo_ingresso = false;  
-    delay(300);
-  }
-
-  if (digitalRead(stopPin)) {
+  } else if (stato == 99) {
     stato = stato_di_provenienza;
     t1 = millis() - tempo_trascorso;  
-    primo_ingresso = true;
     Serial.print("Torno a:");
     Serial.println(stato_di_provenienza);
-    delay(300);
   }
-  
+  delay(300);
 }
