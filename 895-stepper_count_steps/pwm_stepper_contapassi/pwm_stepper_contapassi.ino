@@ -1,13 +1,7 @@
-/*
-stepper Y
-ENA: 8 
-STP: 3
-DIR: 6
-*/
-
-
+volatile unsigned long stepCount = 0; 
 
 void setup() {
+  Serial.begin(9600);
   pinMode(8, OUTPUT); //ENA
   pinMode(6, OUTPUT); //DIR
 
@@ -26,10 +20,23 @@ void setup() {
   OCR2A = 624; // TOP = 624 per 100 Hz
   OCR2B = 312; // Duty cycle 50% (312 è la metà di 624)
   
-  digitalWrite(8, LOW);
-  digitalWrite(6, LOW);
+  // Abilita l'interrupt su OCR2A (Fine di un ciclo PWM)
+  TIMSK2 |= (1 << OCIE2A); 
+
+  digitalWrite(8, LOW); //ena
+  digitalWrite(6, LOW); //dir
 }
+
+ISR(TIMER2_COMPA_vect) {
+  stepCount++;  // Conta un passo ogni ciclo PWM completo
+  if (stepCount >= 1000) {
+    digitalWrite(6, !digitalRead(6)); //dir
+    stepCount = 0;
+  }
+}
+
 
 void loop() {
+  Serial.println(stepCount);  // Stampa il numero di passi fatti
+  delay(200); // Stampa ogni secondo
 }
-
