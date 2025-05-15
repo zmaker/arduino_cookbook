@@ -1,0 +1,98 @@
+[
+    {
+        "id": "e5f34640c8d785bc",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "597cd281a4ff6e04",
+        "type": "serial out",
+        "z": "e5f34640c8d785bc",
+        "name": "",
+        "serial": "e1e1531196a1d5df",
+        "x": 440,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "38a2918872435d68",
+        "type": "inject",
+        "z": "e5f34640c8d785bc",
+        "name": "ON",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "str",
+        "x": 210,
+        "y": 180,
+        "wires": [
+            [
+                "597cd281a4ff6e04"
+            ]
+        ]
+    },
+    {
+        "id": "3e74aaefb2cd02cd",
+        "type": "inject",
+        "z": "e5f34640c8d785bc",
+        "name": "OFF",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "str",
+        "x": 210,
+        "y": 260,
+        "wires": [
+            [
+                "597cd281a4ff6e04"
+            ]
+        ]
+    },
+    {
+        "id": "e1e1531196a1d5df",
+        "type": "serial-port",
+        "name": "Arduino",
+        "serialport": "COM5",
+        "serialbaud": "9600",
+        "databits": 8,
+        "parity": "none",
+        "stopbits": 1,
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": 10000
+    }
+]

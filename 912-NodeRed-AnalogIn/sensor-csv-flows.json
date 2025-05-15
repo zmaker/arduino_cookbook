@@ -1,0 +1,200 @@
+[
+    {
+        "id": "e5f34640c8d785bc",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b00e415daceb365f",
+        "type": "serial in",
+        "z": "e5f34640c8d785bc",
+        "name": "",
+        "serial": "2aac0b9eb242ab2c",
+        "x": 150,
+        "y": 180,
+        "wires": [
+            [
+                "51420a2c425135b1",
+                "ace2baccf4442268"
+            ]
+        ]
+    },
+    {
+        "id": "51420a2c425135b1",
+        "type": "debug",
+        "z": "e5f34640c8d785bc",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "ace2baccf4442268",
+        "type": "change",
+        "z": "e5f34640c8d785bc",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$trim(msg.payload)\t",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 280,
+        "y": 280,
+        "wires": [
+            [
+                "d3c420f3fd0f7df3"
+            ]
+        ]
+    },
+    {
+        "id": "d3c420f3fd0f7df3",
+        "type": "change",
+        "z": "e5f34640c8d785bc",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$number(msg.payload)\t",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 280,
+        "y": 340,
+        "wires": [
+            [
+                "588143759cef9203"
+            ]
+        ]
+    },
+    {
+        "id": "588143759cef9203",
+        "type": "change",
+        "z": "e5f34640c8d785bc",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "[$now(), msg.payload]",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 280,
+        "y": 400,
+        "wires": [
+            [
+                "8c9f4baf7806d9fd",
+                "3ef9d93902c9a363"
+            ]
+        ]
+    },
+    {
+        "id": "8c9f4baf7806d9fd",
+        "type": "debug",
+        "z": "e5f34640c8d785bc",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "3ef9d93902c9a363",
+        "type": "csv",
+        "z": "e5f34640c8d785bc",
+        "name": "",
+        "spec": "rfc",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\r\\n",
+        "temp": "ts, temperatura",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 490,
+        "y": 460,
+        "wires": [
+            [
+                "7861a6d29a9f4f5f"
+            ]
+        ]
+    },
+    {
+        "id": "7861a6d29a9f4f5f",
+        "type": "file",
+        "z": "e5f34640c8d785bc",
+        "name": "",
+        "filename": "C:\\Users\\paolo\\Desktop\\datalog.csv",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 740,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2aac0b9eb242ab2c",
+        "type": "serial-port",
+        "name": "arduino",
+        "serialport": "COM5",
+        "serialbaud": "9600",
+        "databits": 8,
+        "parity": "none",
+        "stopbits": 1,
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": 10000
+    }
+]

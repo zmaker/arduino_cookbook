@@ -1,0 +1,80 @@
+[
+    {
+        "id": "e5f34640c8d785bc",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "01eb7e91c0a90474",
+        "type": "serial in",
+        "z": "e5f34640c8d785bc",
+        "name": "",
+        "serial": "7e510f7a8492df9e",
+        "x": 130,
+        "y": 260,
+        "wires": [
+            [
+                "f74b1c82321d3557"
+            ]
+        ]
+    },
+    {
+        "id": "9b0220c1b2d9fd0c",
+        "type": "debug",
+        "z": "e5f34640c8d785bc",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "f74b1c82321d3557",
+        "type": "rbe",
+        "z": "e5f34640c8d785bc",
+        "name": "",
+        "func": "deadband",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 320,
+        "y": 260,
+        "wires": [
+            [
+                "9b0220c1b2d9fd0c"
+            ]
+        ]
+    },
+    {
+        "id": "7e510f7a8492df9e",
+        "type": "serial-port",
+        "name": "arduino",
+        "serialport": "COM5",
+        "serialbaud": "9600",
+        "databits": 8,
+        "parity": "none",
+        "stopbits": 1,
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": 10000
+    }
+]
