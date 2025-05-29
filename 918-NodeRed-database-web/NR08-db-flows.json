@@ -1,0 +1,345 @@
+[
+    {
+        "id": "e5f34640c8d785bc",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5017e17f516aecb4",
+        "type": "serial in",
+        "z": "e5f34640c8d785bc",
+        "name": "",
+        "serial": "e696e822d68ada5e",
+        "x": 130,
+        "y": 280,
+        "wires": [
+            [
+                "126a376040eae5ea"
+            ]
+        ]
+    },
+    {
+        "id": "126a376040eae5ea",
+        "type": "delay",
+        "z": "e5f34640c8d785bc",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 340,
+        "y": 280,
+        "wires": [
+            [
+                "f99a37708331ec30"
+            ]
+        ]
+    },
+    {
+        "id": "f99a37708331ec30",
+        "type": "change",
+        "z": "e5f34640c8d785bc",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$trim(msg.payload)\t",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 340,
+        "wires": [
+            [
+                "996e3382c509abf2"
+            ]
+        ]
+    },
+    {
+        "id": "996e3382c509abf2",
+        "type": "change",
+        "z": "e5f34640c8d785bc",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$number(msg.payload)\t",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 340,
+        "wires": [
+            [
+                "4f94083549ec7ccb"
+            ]
+        ]
+    },
+    {
+        "id": "4141f45a9c1dce3d",
+        "type": "debug",
+        "z": "e5f34640c8d785bc",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "baee01f5208dbbee",
+        "type": "sqlite",
+        "z": "e5f34640c8d785bc",
+        "mydb": "436d7715407a927d",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 440,
+        "y": 480,
+        "wires": [
+            [
+                "6c4cc879a17fb5cd"
+            ]
+        ]
+    },
+    {
+        "id": "5f3be5db34efc70a",
+        "type": "inject",
+        "z": "e5f34640c8d785bc",
+        "name": "CREATE TABLE",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "CREATE TABLE sensors ( id INTEGER PRIMARY KEY AUTOINCREMENT, ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP, data \tINTEGER, type TEXT )",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 480,
+        "wires": [
+            [
+                "baee01f5208dbbee"
+            ]
+        ]
+    },
+    {
+        "id": "6c4cc879a17fb5cd",
+        "type": "debug",
+        "z": "e5f34640c8d785bc",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "8a5ff4e0bf219c7e",
+        "type": "inject",
+        "z": "e5f34640c8d785bc",
+        "name": "SELECT *",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "SELECT * FROM SENSORS LIMIT 10;",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 540,
+        "wires": [
+            [
+                "baee01f5208dbbee"
+            ]
+        ]
+    },
+    {
+        "id": "4f94083549ec7ccb",
+        "type": "function",
+        "z": "e5f34640c8d785bc",
+        "name": "function 2",
+        "func": "let msg1 = {\n    \"topic\" : \"INSERT INTO sensors (data, type) VALUES (\"+msg.payload+\", 'temp')\"\n};\nreturn msg1;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 160,
+        "y": 420,
+        "wires": [
+            [
+                "baee01f5208dbbee"
+            ]
+        ]
+    },
+    {
+        "id": "372c6c2e79027a39",
+        "type": "http in",
+        "z": "e5f34640c8d785bc",
+        "name": "",
+        "url": "/table",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 620,
+        "wires": [
+            [
+                "0a030c31106f8044"
+            ]
+        ]
+    },
+    {
+        "id": "42bf8937b1e0ade9",
+        "type": "http response",
+        "z": "e5f34640c8d785bc",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 650,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "c545ea205ba5d3c9",
+        "type": "template",
+        "z": "e5f34640c8d785bc",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<html>\n<body>\n    <table border='1'>\n        <tr>\n            <th>id</th>\n            <th>ts</th>\n            <th>data</th>\n            <th>type</th>\n        </tr>\n        {{#payload}}\n        <tr>\n            <th>{{id}}</th>\n            <th>{{ts}}</th>\n            <th>{{data}}</th>\n            <th>{{type}}</th>\n        </tr>\n        {{/payload}}\n    </table>\n</body>   \n</html>",
+        "output": "str",
+        "x": 480,
+        "y": 620,
+        "wires": [
+            [
+                "42bf8937b1e0ade9"
+            ]
+        ]
+    },
+    {
+        "id": "0a030c31106f8044",
+        "type": "change",
+        "z": "e5f34640c8d785bc",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "select * from sensors order by id desc limit 10;",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 150,
+        "y": 700,
+        "wires": [
+            [
+                "be697f3d89727297"
+            ]
+        ]
+    },
+    {
+        "id": "be697f3d89727297",
+        "type": "sqlite",
+        "z": "e5f34640c8d785bc",
+        "mydb": "436d7715407a927d",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 380,
+        "y": 700,
+        "wires": [
+            [
+                "c545ea205ba5d3c9"
+            ]
+        ]
+    },
+    {
+        "id": "e696e822d68ada5e",
+        "type": "serial-port",
+        "name": "arduino",
+        "serialport": "COM4",
+        "serialbaud": "9600",
+        "databits": 8,
+        "parity": "none",
+        "stopbits": 1,
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": 10000
+    },
+    {
+        "id": "436d7715407a927d",
+        "type": "sqlitedb",
+        "db": "D:\\NR08-database.db",
+        "mode": "RWC"
+    }
+]

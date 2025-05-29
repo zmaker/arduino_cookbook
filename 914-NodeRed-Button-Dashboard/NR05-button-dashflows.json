@@ -1,0 +1,187 @@
+[
+    {
+        "id": "e5f34640c8d785bc",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1c127086dce51d54",
+        "type": "serial in",
+        "z": "e5f34640c8d785bc",
+        "name": "",
+        "serial": "a6208c41dc75af25",
+        "x": 130,
+        "y": 240,
+        "wires": [
+            [
+                "a04ba0317981a456"
+            ]
+        ]
+    },
+    {
+        "id": "c391139336c95d0a",
+        "type": "ui_gauge",
+        "z": "e5f34640c8d785bc",
+        "name": "",
+        "group": "992f56c535718c90",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 530,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "265dad1b49bf62e0",
+        "type": "debug",
+        "z": "e5f34640c8d785bc",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "a04ba0317981a456",
+        "type": "delay",
+        "z": "e5f34640c8d785bc",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 310,
+        "y": 240,
+        "wires": [
+            [
+                "3efd139157dd6c9d"
+            ]
+        ]
+    },
+    {
+        "id": "3efd139157dd6c9d",
+        "type": "change",
+        "z": "e5f34640c8d785bc",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$trim(msg.payload)\t",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 240,
+        "y": 340,
+        "wires": [
+            [
+                "abf8c0200b099a52"
+            ]
+        ]
+    },
+    {
+        "id": "abf8c0200b099a52",
+        "type": "change",
+        "z": "e5f34640c8d785bc",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$number(msg.payload)\t",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 240,
+        "y": 400,
+        "wires": [
+            [
+                "265dad1b49bf62e0",
+                "c391139336c95d0a"
+            ]
+        ]
+    },
+    {
+        "id": "a6208c41dc75af25",
+        "type": "serial-port",
+        "name": "arduino",
+        "serialport": "COM4",
+        "serialbaud": "9600",
+        "databits": 8,
+        "parity": "none",
+        "stopbits": 1,
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": 10000
+    },
+    {
+        "id": "992f56c535718c90",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "cf8e96118638b6fa",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "cf8e96118638b6fa",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]

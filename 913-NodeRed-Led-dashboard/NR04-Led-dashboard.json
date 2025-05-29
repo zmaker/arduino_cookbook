@@ -1,0 +1,149 @@
+[
+    {
+        "id": "e5f34640c8d785bc",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f19902682fb20b77",
+        "type": "ui_button",
+        "z": "e5f34640c8d785bc",
+        "name": "",
+        "group": "a4bbf960c29059da",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "ON",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "a",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 250,
+        "y": 180,
+        "wires": [
+            [
+                "088d4eac0ec54181"
+            ]
+        ]
+    },
+    {
+        "id": "970b524e0324978b",
+        "type": "ui_switch",
+        "z": "e5f34640c8d785bc",
+        "name": "",
+        "label": "switch",
+        "tooltip": "",
+        "group": "a4bbf960c29059da",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "a",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "s",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 250,
+        "y": 320,
+        "wires": [
+            [
+                "088d4eac0ec54181"
+            ]
+        ]
+    },
+    {
+        "id": "1156e6474b31b145",
+        "type": "ui_button",
+        "z": "e5f34640c8d785bc",
+        "name": "",
+        "group": "a4bbf960c29059da",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "OFF",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "s",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 250,
+        "y": 240,
+        "wires": [
+            [
+                "088d4eac0ec54181"
+            ]
+        ]
+    },
+    {
+        "id": "088d4eac0ec54181",
+        "type": "serial out",
+        "z": "e5f34640c8d785bc",
+        "name": "",
+        "serial": "a15e3866dfed3f77",
+        "x": 540,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "a4bbf960c29059da",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "49dbc69617c4d1f0",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a15e3866dfed3f77",
+        "type": "serial-port",
+        "name": "arduino",
+        "serialport": "COM4",
+        "serialbaud": "9600",
+        "databits": 8,
+        "parity": "none",
+        "stopbits": 1,
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": 10000
+    },
+    {
+        "id": "49dbc69617c4d1f0",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]

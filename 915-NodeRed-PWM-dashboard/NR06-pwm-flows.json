@@ -1,0 +1,130 @@
+[
+    {
+        "id": "e5f34640c8d785bc",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1e1ee23c72cc858d",
+        "type": "ui_slider",
+        "z": "e5f34640c8d785bc",
+        "name": "",
+        "label": "slider",
+        "tooltip": "",
+        "group": "bc7e1b05cb4a6fbd",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "254",
+        "step": 1,
+        "className": "",
+        "x": 170,
+        "y": 220,
+        "wires": [
+            [
+                "bd54cd8c13b484c9"
+            ]
+        ]
+    },
+    {
+        "id": "bd54cd8c13b484c9",
+        "type": "change",
+        "z": "e5f34640c8d785bc",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload & \"\\n\"",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 220,
+        "wires": [
+            [
+                "5a6875fa634798c3",
+                "0e1ac9ca5566794c"
+            ]
+        ]
+    },
+    {
+        "id": "5a6875fa634798c3",
+        "type": "debug",
+        "z": "e5f34640c8d785bc",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "0e1ac9ca5566794c",
+        "type": "serial out",
+        "z": "e5f34640c8d785bc",
+        "name": "",
+        "serial": "747d17cb5fed8d18",
+        "x": 600,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "bc7e1b05cb4a6fbd",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "615ac44a4496cfff",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "747d17cb5fed8d18",
+        "type": "serial-port",
+        "name": "arduiono",
+        "serialport": "COM4",
+        "serialbaud": "9600",
+        "databits": 8,
+        "parity": "none",
+        "stopbits": 1,
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": 10000
+    },
+    {
+        "id": "615ac44a4496cfff",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
