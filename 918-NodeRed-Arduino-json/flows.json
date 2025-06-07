@@ -1,0 +1,174 @@
+[
+    {
+        "id": "fc41198307b665e7",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "16c6615a34969d29",
+        "type": "serial in",
+        "z": "fc41198307b665e7",
+        "name": "",
+        "serial": "e696e822d68ada5e",
+        "x": 130,
+        "y": 140,
+        "wires": [
+            [
+                "2cc7591ad76e2b3b"
+            ]
+        ]
+    },
+    {
+        "id": "5ceeb43c3997659b",
+        "type": "serial out",
+        "z": "fc41198307b665e7",
+        "name": "",
+        "serial": "e696e822d68ada5e",
+        "x": 660,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "4f1081e6490e73d7",
+        "type": "inject",
+        "z": "fc41198307b665e7",
+        "name": "Read Pin state",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"pin\":12}",
+        "payloadType": "str",
+        "x": 240,
+        "y": 260,
+        "wires": [
+            [
+                "5ceeb43c3997659b",
+                "93fd16dba1fb490e"
+            ]
+        ]
+    },
+    {
+        "id": "93fd16dba1fb490e",
+        "type": "debug",
+        "z": "fc41198307b665e7",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "2cc7591ad76e2b3b",
+        "type": "debug",
+        "z": "fc41198307b665e7",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "727de4772de3db9f",
+        "type": "inject",
+        "z": "fc41198307b665e7",
+        "name": "set pin 12 on",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"pin\":12, \"value\":1}",
+        "payloadType": "str",
+        "x": 230,
+        "y": 360,
+        "wires": [
+            [
+                "5ceeb43c3997659b"
+            ]
+        ]
+    },
+    {
+        "id": "0be840770b3008be",
+        "type": "inject",
+        "z": "fc41198307b665e7",
+        "name": "set pin 12 off",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"pin\":12, \"value\":0}",
+        "payloadType": "str",
+        "x": 230,
+        "y": 420,
+        "wires": [
+            [
+                "5ceeb43c3997659b"
+            ]
+        ]
+    },
+    {
+        "id": "e696e822d68ada5e",
+        "type": "serial-port",
+        "name": "arduino",
+        "serialport": "COM4",
+        "serialbaud": "9600",
+        "databits": 8,
+        "parity": "none",
+        "stopbits": 1,
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "\\n",
+        "responsetimeout": 10000
+    }
+]
