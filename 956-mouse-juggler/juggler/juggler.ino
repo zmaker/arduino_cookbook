@@ -16,7 +16,7 @@ void loop() {
         Serial.println("JUG ON");
         digitalWrite(13, HIGH);
         delay(500);
-        //Mouse.begin();        
+        Mouse.begin();        
         stato = 1;
       } 
       break;
