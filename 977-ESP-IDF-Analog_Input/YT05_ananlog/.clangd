@@ -1,0 +1,3 @@
+CompileFlags:
+  CompilationDatabase: C:\Users\paolo\OneDrive\Documents\espressif\YT05_ananlog\build
+  Remove: [-m*, -f*]

@@ -1,0 +1,3 @@
+CompileFlags:
+  CompilationDatabase: C:\Users\paolo\OneDrive\Documents\espressif\YT02_Button\build
+  Remove: [-m*, -f*]
