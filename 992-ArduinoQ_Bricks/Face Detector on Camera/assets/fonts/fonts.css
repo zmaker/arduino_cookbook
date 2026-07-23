@@ -1,0 +1,19 @@
+/*
+ * SPDX-FileCopyrightText: Copyright (C) Arduino s.r.l. and/or its affiliated companies
+ *
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-display: swap;
+  src: url('Roboto/RobotoMono-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-display: swap;
+  src: url('Open Sans/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
+}
