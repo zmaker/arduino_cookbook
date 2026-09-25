@@ -7,7 +7,7 @@
 #define COLLECT_NUMBER   20              // campioni per la media (1-100)
 #define Ozone_IICAddress OZONE_ADDRESS_3 // 0x73
 #define LCD_ADDRESS      0x27            // prova 0x3F se non vedi nulla
-#define WARMUP_SEC       10
+#define WARMUP_SEC       180
 
 LiquidCrystal_I2C lcd(LCD_ADDRESS, 16, 2);
 DFRobot_OzoneSensor Ozone;
